@@ -86,9 +86,15 @@ class HomePage extends StatelessWidget {
                                   kBorderRadius12,
                                 ),
                               ),
-                              child: const Align(
+                              child: Align(
                                 alignment: Alignment.center,
-                                child: Text("APPS"),
+                                child: Text(
+                                  "APPS",
+                                  style: kInterRegular.copyWith(
+                                    fontSize:
+                                        SizeConfig.blockSizeHorizontal! * 4,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
@@ -98,9 +104,15 @@ class HomePage extends StatelessWidget {
                                 borderRadius:
                                     BorderRadius.circular(kBorderRadius12),
                               ),
-                              child: const Align(
+                              child: Align(
                                 alignment: Alignment.center,
-                                child: Text("APPS"),
+                                child: Text(
+                                  "APPS",
+                                  style: kInterRegular.copyWith(
+                                    fontSize:
+                                        SizeConfig.blockSizeHorizontal! * 4,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
@@ -110,9 +122,15 @@ class HomePage extends StatelessWidget {
                                 borderRadius:
                                     BorderRadius.circular(kBorderRadius12),
                               ),
-                              child: const Align(
+                              child: Align(
                                 alignment: Alignment.center,
-                                child: Text("APPS"),
+                                child: Text(
+                                  "APPS",
+                                  style: kInterRegular.copyWith(
+                                    fontSize:
+                                        SizeConfig.blockSizeHorizontal! * 4,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
@@ -168,14 +186,213 @@ class HomePage extends StatelessWidget {
                           right: index == 1 ? kPadding28 : 0,
                         ),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(kBorderRadius26),
                           image: const DecorationImage(
                             image: AssetImage('assets/bg-blue.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(
+                            kPadding24,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Sleep Meditation',
+                                style: kInterBold.copyWith(
+                                  color: kWhiteFF,
+                                  fontSize:
+                                      SizeConfig.blockSizeHorizontal! * 5.5,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: kPadding4,
+                              ),
+                              Text(
+                                '7 Day Audio and Video Series',
+                                style: kInterBold.copyWith(
+                                  color: kWhiteFF.withOpacity(0.6),
+                                  fontSize: SizeConfig.blockSizeHorizontal! * 4,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: kPadding32,
+                              ),
+                              Row(
+                                children: [
+                                  SvgPicture.asset('assets/headphone-icon.svg'),
+                                  const SizedBox(
+                                    width: kPadding16,
+                                  ),
+                                  SvgPicture.asset('assets/movie-icon.svg'),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
                       );
                     }),
+              ),
+              const SizedBox(
+                height: kPadding28,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: kPadding28,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Recent',
+                      style: kInterMedium.copyWith(
+                        color: kUltraViolet51,
+                        fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: kPadding16,
+                    ),
+                    GridView.count(
+                      shrinkWrap: true,
+                      crossAxisCount: 2,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: kPadding16,
+                      ),
+                      primary: false,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(kBorderRadius26),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/bg-blue.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: kPadding16,
+                              vertical: kPadding24,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Sleep Meditation',
+                                  style: kInterBold.copyWith(
+                                    color: kWhiteFF,
+                                    fontSize:
+                                        SizeConfig.blockSizeHorizontal! * 5,
+                                  ),
+                                ),
+                                SvgPicture.asset('assets/headphone-icon.svg'),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(kBorderRadius26),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/bg-blue.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: kPadding16,
+                              vertical: kPadding24,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Sleep Meditation',
+                                  style: kInterBold.copyWith(
+                                    color: kWhiteFF,
+                                    fontSize:
+                                        SizeConfig.blockSizeHorizontal! * 5,
+                                  ),
+                                ),
+                                SvgPicture.asset('assets/headphone-icon.svg'),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(kBorderRadius26),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/bg-blue.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: kPadding16,
+                              vertical: kPadding24,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Sleep Meditation',
+                                  style: kInterBold.copyWith(
+                                    color: kWhiteFF,
+                                    fontSize:
+                                        SizeConfig.blockSizeHorizontal! * 5,
+                                  ),
+                                ),
+                                SvgPicture.asset('assets/headphone-icon.svg'),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(kBorderRadius26),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/bg-blue.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: kPadding16,
+                              vertical: kPadding24,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Sleep Meditation',
+                                  style: kInterBold.copyWith(
+                                    color: kWhiteFF,
+                                    fontSize:
+                                        SizeConfig.blockSizeHorizontal! * 5,
+                                  ),
+                                ),
+                                SvgPicture.asset('assets/headphone-icon.svg'),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
